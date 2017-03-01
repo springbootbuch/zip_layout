@@ -31,4 +31,4 @@ java -Dloader.path=target/dependency/ojdbc7-12.1.0.2.jar,target/dependency/oracl
 
 and it will print the title of a famous Austrian song.
 
-See [springbootbuch.de](http://info.michael-simons.eu/tag/spring-boot-buch/) for more about the upcoming Spring Boot Buch.
+See [springbootbuch.de](http://springbootbuch.de) for more about the upcoming Spring Boot Buch.
