@@ -31,4 +31,12 @@ java -Dloader.path=target/dependency/ojdbc7-12.1.0.2.jar,target/dependency/oracl
 
 and it will print the title of a famous Austrian song.
 
+The `loader.path` can also contain a directory, that is automatically searched for JAR-files:
+
+```
+java -Dloader.path=/var/lib/oracle/ -jar target/zip_layout.jar 
+```
+
+The default connection inside this repo is `scott/tiger` running agains an instance on localhost with a SID of `ORCLPDB1`. To make this a self-contained demo, I have provided the Maven Docker Plugin configured to start an instance of Oracle 12c inside docker. Read more [here](http://info.michael-simons.eu/2016/10/30/create-a-oracle-database-docker-container-for-your-spring-boot-jooq-application/).
+
 See [springbootbuch.de](http://springbootbuch.de) for more about the upcoming Spring Boot Buch.

@@ -1,0 +1,19 @@
+-- Change to PDB which was created inside parent iamge
+ALTER SESSION SET CONTAINER = ORCLPDB1;
+ 
+-- Create scott user
+DECLARE
+  v_id DBA_USERS.USER_ID%TYPE;
+BEGIN
+  SELECT USER_ID INTO v_id FROM DBA_USERS WHERE username = 'SCOTT';
+EXCEPTION
+  WHEN no_data_found THEN
+    EXECUTE IMMEDIATE
+      'CREATE USER scott IDENTIFIED BY tiger PROFILE "DEFAULT" ACCOUNT UNLOCK';
+END;
+/
+
+GRANT "CONNECT" TO scott;
+GRANT "DBA" TO scott;
+
+EXIT;
